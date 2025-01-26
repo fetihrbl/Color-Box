@@ -1,0 +1,51 @@
+/* BoxContainer Component */
+.BoxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Individual Boxes */
+  .BoxContainer div {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect on Boxes */
+  .BoxContainer div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Box Click Effect */
+  .BoxContainer div:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .BoxContainer {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .BoxContainer {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+  
+    .BoxContainer div {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
